@@ -39,22 +39,24 @@ export function Calendar() {
             const dateContent = <div className='date' style={{ paddingLeft: `${(10 + ((monthStartDate === 0 ? 7 : monthStartDate) - 1) * 2.14285)}%` }}>
                 {dates}
             </div>
-            const content = <table className="content-table">
-                <tr>
-                    <td>
-                        <div className="month">{month}</div>
-                    </td>
-                    <td>
-                        <div className="week-box left">
-                            {populateEvents(month)}
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            // const content = <div>
-            // <div></div>
-            // <div></div>
-        // </div>
+            // const content = <table className="content-table">
+            //     <tr>
+            //         <td>
+            //             <div className="month">{month}</div>
+            //         </td>
+            //         <td>
+            //             <div className="week-box left">
+            //                 {populateEvents(month)}
+            //             </div>
+            //         </td>
+            //     </tr>
+            // </table>
+            const content = <div className='content-events'>
+            <div className='event-month'>{month}</div>
+            <div className='event-list'>
+            {populateEvents(month)}
+            </div>
+        </div>
             tableContent.push(dateContent);
             tableContent.push(content);
         })

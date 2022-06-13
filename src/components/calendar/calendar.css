@@ -123,4 +123,15 @@ table {
     height: 100px;
     border: 1px solid;
     grid-template-columns: 9.7% 90.3%;
+    
+}
+.event-month {
+    text-align: center;
+    align-self: center;
+}
+.event-list {
+    background-image:
+      repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%),
+      repeating-linear-gradient(90deg, #ccc 0 1px, transparent 1px 100%);
+    background-size: 2.38095% 16px;
 }
